@@ -13,7 +13,7 @@ phases:
       - echo =============== Installing Wine for Ubuntu...
       - wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key
       - apt-key add Release.key
-      - apt-add-repository add-apt-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
+      - apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
       - apt update
       - apt install --install-recommends winehq-stable
   build:
