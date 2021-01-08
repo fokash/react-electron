@@ -11,10 +11,9 @@ phases:
       - echo =============== Installing dependencies...
       - npm install
       - echo =============== Installing Wine for Ubuntu...
-      - apt-add-repository --remove 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Ubuntu_18.04_standard ./'
-      - wget -nc https://dl.winehq.org/wine-builds/Release.key
+      - wget -nc https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key
       - apt-key add Release.key
-      - apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+      - apt-add-repository add-apt-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
       - apt update
       - apt install --install-recommends winehq-stable
   build:
