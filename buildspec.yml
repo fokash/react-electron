@@ -10,6 +10,13 @@ phases:
     commands:
       - echo =============== Installing dependencies...
       - npm install
+      - echo =============== Installing Wine for Ubuntu...
+      - dpkg --add-architecture i386
+      - wget -nc https://dl.winehq.org/wine-builds/winehq.key
+      - apt-key add winehq.key
+      - add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+      - apt update
+      - apt install --install-recommends winehq-stable
   build:
     commands:
       - echo =============== Building...
