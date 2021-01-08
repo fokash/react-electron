@@ -16,7 +16,7 @@ phases:
       - npm run electron-pack
 artifacts:
   files:
-    - "*.exe"
+    - "**/*"
   name: portfolio-$(date +%Y-%m-%d)
   discard-paths: no
   base-directory: dist
