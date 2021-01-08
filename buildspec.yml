@@ -12,7 +12,8 @@ phases:
       - npm install
       - echo =============== Installing Wine for Ubuntu...
       - apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
-      - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys DFA175A75104960E
+      - wget -nc https://dl.winehq.org/wine-builds/winehq.key
+      - apt-key add winehq.key
       - apt update
       - apt install --install-recommends winehq-stable
   build:
